@@ -352,6 +352,14 @@ body {
   }
 }
 
+.hidden {
+  display: none;
+}
+
+.rotate {
+  transform: rotate(45deg);
+}
+
 .directors {
   width: 100%;
   height: auto;
@@ -378,7 +386,7 @@ body {
 }
 
 .directors-card {
-  // position: relative;
+  position: relative;
   width: 100%;
   max-width: 350px;
   height: 253px;
@@ -398,7 +406,8 @@ body {
     color: $white-color;
     font-style: italic;
   }
-  button {
+  .btn {
+    position: relative;
     margin-top: 30px;
     width: 56px;
     height: 56px;
@@ -409,10 +418,41 @@ body {
     color: $sacramento-green;
     font-size: 30px;
     font-weight: 700;
+    z-index: 1;
     &:hover {
       background-color: $rapture-blue;
     }
   }
+}
+
+.inner-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $dark-green;
+  padding: 35px 24px 0px 24px;
+}
+
+.inner-card p {
+  font-style: normal;
+  max-width: 254px;
+  margin: auto;
+  margin-top: 8px;
+}
+
+.inner-card-links {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.inner-card-links a {
+  text-decoration: none;
+}
+
+.inner-card-links a:hover svg path {
+  fill: $light-coral;
 }
 
 .clients {

@@ -343,6 +343,14 @@ body {
   background-position: bottom right;
 }
 
+.hidden {
+  display: none;
+}
+
+.rotate {
+  transform: rotate(45deg);
+}
+
 .directors {
   width: 100%;
   height: auto;
@@ -366,6 +374,7 @@ body {
 }
 
 .directors-card {
+  position: relative;
   width: 100%;
   max-width: 350px;
   height: 253px;
@@ -386,7 +395,8 @@ body {
   color: #ffffff;
   font-style: italic;
 }
-.directors-card button {
+.directors-card .btn {
+  position: relative;
   margin-top: 30px;
   width: 56px;
   height: 56px;
@@ -397,9 +407,40 @@ body {
   color: #012f34;
   font-size: 30px;
   font-weight: 700;
+  z-index: 1;
 }
-.directors-card button:hover {
+.directors-card .btn:hover {
   background-color: #79c8c7;
+}
+
+.inner-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #002529;
+  padding: 35px 24px 0px 24px;
+}
+
+.inner-card p {
+  font-style: normal;
+  max-width: 254px;
+  margin: auto;
+  margin-top: 8px;
+}
+
+.inner-card-links {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.inner-card-links a {
+  text-decoration: none;
+}
+
+.inner-card-links a:hover svg path {
+  fill: #f67e7e;
 }
 
 .clients {
